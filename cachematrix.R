@@ -2,27 +2,20 @@
 ## can cache its inverse in
 ## the calling environment, without having to generate every time when referenced
 ## 
-## 1. set   value of matric 
-## 2. get   value of matric 
+## 1. cMatrix   cache value of matrix after inversing 
 
 makeCacheMatrix <- function(x = matrix()) {
-
   
   m <- NULL
   
-  set <- function(y) {
-    
-    x <<- y
-    m <<-NULL
+  setcacheMatrix <- function(cMatrix) m <<- cMatrix
+  
+  
+  cMatrix <- function(x){
+  m1 <- solve(x, ...)
   }
   
-  
-  
+return (setcacheMatrix)
 }
 
 
-## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
-}
